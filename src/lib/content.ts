@@ -2,13 +2,26 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 
-const CONTENT_ROOT = path.join(process.cwd(), "..", "kenneth_landing", "src");
+const DEFAULT_CONTENT_ROOT = path.join(
+  process.cwd(),
+  "..",
+  "kenneth_landing",
+  "src"
+);
 
-function ensureContentRoot(): string {
-  if (!fs.existsSync(CONTENT_ROOT)) {
-    throw new Error(`Content root not found: ${CONTENT_ROOT}`);
+function getContentRoot(): string | null {
+  const candidates = [
+    process.env.CONTENT_ROOT && path.resolve(process.env.CONTENT_ROOT),
+    path.join(process.cwd(), "content"),
+    path.join(process.cwd(), "src", "content"),
+    DEFAULT_CONTENT_ROOT,
+  ].filter(Boolean) as string[];
+
+  for (const root of candidates) {
+    if (fs.existsSync(root)) return root;
   }
-  return CONTENT_ROOT;
+
+  return null;
 }
 
 function safeReadFile(filePath: string): string | null {
@@ -21,7 +34,8 @@ function safeReadFile(filePath: string): string | null {
 
 /** Resolve .md file by slug; tries exact, then with .md extension. */
 function resolveMd(baseDir: string, slug: string): string | null {
-  const root = ensureContentRoot();
+  const root = getContentRoot();
+  if (!root) return null;
   const withExt = slug.endsWith(".md") ? slug : `${slug}.md`;
   const full = path.join(root, baseDir, withExt);
   if (fs.existsSync(full)) return full;
@@ -46,7 +60,8 @@ export function getPageBySlug(slug: string): ContentResult {
 }
 
 export function getBookBySlug(slug: string): ContentResult {
-  const root = ensureContentRoot();
+  const root = getContentRoot();
+  if (!root) return null;
   const booksDir = path.join(root, "books");
   const withExt = slug.endsWith(".md") ? slug : `${slug}.md`;
   const full = path.join(booksDir, withExt);
@@ -86,7 +101,8 @@ export function getBookFrameworkBySlug(slug: string): ContentResult {
 }
 
 function listMdSlugs(dir: string): string[] {
-  const root = ensureContentRoot();
+  const root = getContentRoot();
+  if (!root) return [];
   const full = path.join(root, dir);
   if (!fs.existsSync(full)) return [];
   const names = fs.readdirSync(full);
@@ -97,7 +113,8 @@ function listMdSlugs(dir: string): string[] {
 
 /** Only top-level .md files in books/ (no subdirs). */
 export function listBookSlugs(): string[] {
-  const root = ensureContentRoot();
+  const root = getContentRoot();
+  if (!root) return [];
   const booksDir = path.join(root, "books");
   if (!fs.existsSync(booksDir)) return [];
   const names = fs.readdirSync(booksDir, { withFileTypes: true });
