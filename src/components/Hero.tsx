@@ -20,10 +20,9 @@ export function Hero() {
         </h1>
         <div className="hero-sub-line" />
         <p className="hero-desc">
-          A personal guide to{" "}
-          <em>freedom, discipline, and sovereign thinking</em> in the digital
-          age — rooted in Bahamian culture, written for anyone building
-          something real.
+          This is not a blog. It is a body of work. A personal guide to{" "}
+          <em>freedom, discipline, and sovereign thinking</em> in the digital age, rooted in Bahamian
+          culture and written for anyone serious about building something real.
         </p>
         <div className="hero-parts-row">
           <Link href="#parts" className="hero-part-pill brass">

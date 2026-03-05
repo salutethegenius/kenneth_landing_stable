@@ -182,9 +182,9 @@ body::before {
   opacity:0;animation:fadeIn 1s ease 0.8s forwards;
 }
 .hero-desc {
-  font-size:16px;font-weight:300;font-style:italic;
-  color:rgba(244,237,216,0.52);
-  max-width:520px;line-height:1.85;
+  font-size:17px;font-weight:300;font-style:italic;
+  color:rgba(244,237,216,0.74);
+  max-width:560px;line-height:1.9;
   position:relative;z-index:1;
   opacity:0;animation:fadeUp 0.8s ease 1s forwards;
   margin-bottom:52px;
@@ -241,8 +241,8 @@ body::before {
 .section-h em { font-style:italic;color:var(--brass-l); }
 .section-h.dark em { color:var(--brass); }
 .section-p {
-  font-size:15.5px;font-weight:300;line-height:1.88;
-  color:rgba(244,237,216,0.5);max-width:580px;
+  font-size:16px;font-weight:300;line-height:1.9;
+  color:rgba(244,237,216,0.72);max-width:620px;
 }
 .section-p.dark { color:var(--warm-stone); }
 .fu { opacity:0;transform:translateY(20px);transition:opacity 0.7s ease,transform 0.7s ease; }
@@ -292,8 +292,8 @@ body::before {
   color:var(--parch);letter-spacing:0.02em;margin-bottom:10px;
 }
 .pp-body {
-  font-size:14px;font-weight:300;color:rgba(244,237,216,0.48);
-  line-height:1.82;font-style:italic;
+  font-size:15px;font-weight:300;color:rgba(244,237,216,0.78);
+  line-height:1.9;font-style:italic;
 }
 
 .parts { background:var(--parch);padding:112px 72px; }
@@ -368,11 +368,11 @@ body::before {
 }
 .fc-title em { font-style:italic;color:var(--brass-l);font-weight:300; }
 .fc-desc {
-  font-size:13.5px;font-weight:300;font-style:italic;
-  color:rgba(244,237,216,0.42);line-height:1.75;margin-bottom:24px;
+  font-size:14px;font-weight:300;font-style:italic;
+  color:rgba(244,237,216,0.78);line-height:1.85;margin-bottom:24px;
 }
 .fc-part {
-  font-family:'DM Mono',monospace;font-size:8.5px;color:rgba(244,237,216,0.22);
+  font-family:'DM Mono',monospace;font-size:8.5px;color:rgba(244,237,216,0.55);
   letter-spacing:0.1em;padding-top:18px;border-top:1px solid rgba(244,237,216,0.07);
   display:flex;align-items:center;gap:6px;transition:color 0.2s;
 }
@@ -394,7 +394,7 @@ body::before {
 }
 .toc-part-name {
   font-family:'Cormorant Garant',serif;font-size:16px;font-weight:700;
-  color:rgba(244,237,216,0.6);letter-spacing:0.04em;text-transform:uppercase;
+  color:rgba(244,237,216,0.9);letter-spacing:0.04em;text-transform:uppercase;
   font-style:normal;
 }
 .toc-sub-title {
@@ -404,7 +404,7 @@ body::before {
 .toc-links { list-style:none;display:flex;flex-direction:column;gap:2px; }
 .toc-links a {
   font-family:'Cormorant Garant',serif;font-size:16px;font-weight:400;
-  color:rgba(244,237,216,0.42);text-decoration:none;
+  color:rgba(244,237,216,0.78);text-decoration:none;
   padding:5px 0;border-bottom:1px solid rgba(244,237,216,0.04);
   display:flex;align-items:center;gap:10px;
   transition:color 0.2s,padding-left 0.2s;letter-spacing:0.01em;
@@ -416,7 +416,7 @@ body::before {
 }
 .toc-links a:hover::before { opacity:0.7; }
 .toc-left-link {
-  font-family:'DM Mono',monospace;font-size:10px;color:rgba(244,237,216,0.4);
+  font-family:'DM Mono',monospace;font-size:10px;color:rgba(244,237,216,0.8);
   text-decoration:none;letter-spacing:0.14em;padding:11px 20px;
   border:1px solid rgba(244,237,216,0.07);
   display:flex;align-items:center;justify-content:space-between;
@@ -436,7 +436,7 @@ body::before {
 }
 .about-quote em { font-style:normal;font-weight:700;color:var(--brass-l); }
 .about-body {
-  font-size:15px;font-weight:300;color:rgba(244,237,216,0.5);
+  font-size:16px;font-weight:300;color:rgba(244,237,216,0.8);
   line-height:1.9;margin-bottom:22px;
 }
 .about-body strong { color:rgba(244,237,216,0.82);font-weight:500; }
@@ -488,13 +488,13 @@ body::before {
   letter-spacing:0.18em;margin-bottom:18px;text-transform:uppercase;
 }
 .fb-p { font-size:13px;font-weight:300;color:rgba(244,237,216,0.28);line-height:1.85;max-width:260px;margin-bottom:18px; }
-.fb-legal { font-family:'DM Mono',monospace;font-size:8px;color:rgba(244,237,216,0.14);letter-spacing:0.06em;line-height:1.9; }
-.footer-col-title { font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(244,237,216,0.2);margin-bottom:18px; }
+.fb-legal { font-family:'DM Mono',monospace;font-size:8px;color:rgba(244,237,216,0.4);letter-spacing:0.06em;line-height:1.9; }
+.footer-col-title { font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:0.22em;text-transform:uppercase;color:rgba(244,237,216,0.5);margin-bottom:18px; }
 .footer-links { list-style:none;display:flex;flex-direction:column;gap:10px; }
-.footer-links a { font-family:'Cormorant Garant',serif;font-size:15px;color:rgba(244,237,216,0.38);text-decoration:none;transition:color 0.2s;letter-spacing:0.01em; }
+.footer-links a { font-family:'Cormorant Garant',serif;font-size:15px;color:rgba(244,237,216,0.8);text-decoration:none;transition:color 0.2s;letter-spacing:0.01em; }
 .footer-links a:hover { color:rgba(244,237,216,0.85); }
 .footer-bottom { padding-top:28px;border-top:1px solid rgba(244,237,216,0.05);display:flex;justify-content:space-between;align-items:center; }
-.footer-bottom p { font-family:'DM Mono',monospace;font-size:9px;color:rgba(244,237,216,0.15);letter-spacing:0.07em; }
+.footer-bottom p { font-family:'DM Mono',monospace;font-size:9px;color:rgba(244,237,216,0.5);letter-spacing:0.07em; }
 .footer-bottom em { font-style:normal;color:var(--brass-l); }
 
 /* Content (Markdown) prose */

@@ -6,7 +6,7 @@ const partCards = [
     roman: "I",
     part: "Part One",
     title: "Digital Freedom",
-    desc: "Building wealth, specific knowledge, and the mindset for the digital economy — from a Bahamian perspective.",
+    desc: "Building wealth, specific knowledge, and digital leverage from a Bahamian perspective. Not as consumers of global systems, but as owners of our own.",
     count: "7 works",
     delay: "0s",
   },
@@ -15,7 +15,7 @@ const partCards = [
     roman: "II",
     part: "Part Two",
     title: "Discipline & Happiness",
-    desc: "Happiness is learned, chosen, and requires presence. The inner work that makes the outer work possible.",
+    desc: "The inner architecture. Happiness is learned. Presence is trained. The outer empire collapses without inner order.",
     count: "6 works",
     delay: "0.05s",
   },
@@ -24,7 +24,7 @@ const partCards = [
     roman: "III",
     part: "Part Three",
     title: "Systems & Strategy",
-    desc: "The Empire Blueprint. Systems Over Stress. Building in Silence. The frameworks for doing the work.",
+    desc: "The Empire Blueprint. Systems Over Stress. Building in Silence. This is where vision turns into structure.",
     count: "4 works",
     delay: "0.1s",
   },
@@ -33,7 +33,7 @@ const partCards = [
     roman: "IV",
     part: "Part Four",
     title: "Legacy & Identity",
-    desc: "Bahamian by Design. The Moncur Method. Fatherhood and what we leave behind when we leave.",
+    desc: "Bahamian by Design. The Moncur Method. Fatherhood. What remains after the applause fades.",
     count: "3 works",
     delay: "0.15s",
   },
@@ -42,7 +42,7 @@ const partCards = [
     roman: "V",
     part: "Part Five",
     title: "Digital Power & Ethics",
-    desc: "Data sovereignty is not optional. The Ghost Protocols. What we owe each other in the digital age.",
+    desc: "Data sovereignty is not optional. The Ghost Protocols. Power without ethics is chaos.",
     count: "2 works",
     delay: "0.05s",
   },
@@ -51,7 +51,7 @@ const partCards = [
     roman: "VI",
     part: "Part Six",
     title: "The Street & The Code",
-    desc: "The Art of War Rooms. The Hustler's Compass. Street wisdom and digital strategy are the same discipline.",
+    desc: "The Art of War Rooms. The Hustler's Compass. Street discipline and digital execution follow the same laws.",
     count: "2 works",
     delay: "0.1s",
   },
@@ -72,9 +72,8 @@ export function Parts() {
           </div>
           <div className="fu" style={{ transitionDelay: "0.1s" }}>
             <p className="section-p dark">
-              Twenty-plus essays, books, and frameworks — organized into seven
-              parts that move from the personal to the sovereign. Start anywhere.
-              Follow what calls you.
+              Twenty plus essays, books, and frameworks organized into seven parts. They move from the
+              personal to the sovereign. Start anywhere. Follow what pulls you. Everything connects.
             </p>
           </div>
         </div>

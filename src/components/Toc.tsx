@@ -136,9 +136,9 @@ export function Toc() {
               <em>Table of Contents</em>
             </h2>
             <p className="section-p" style={{ marginBottom: 36 }}>
-              Every essay, book, and framework — organized as a reading path.
-              Follow sequentially or jump to what calls you. Each part builds on
-              the one before, but every piece stands alone.
+              Every essay, book, and framework organized as a deliberate reading path. Move sequentially
+              or jump where you feel resistance. Each part builds on the previous one, but every piece
+              stands on its own.
             </p>
             <div
               style={{

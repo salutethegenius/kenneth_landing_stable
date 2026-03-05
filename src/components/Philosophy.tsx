@@ -13,30 +13,52 @@ export function Philosophy() {
             </blockquote>
             <p
               style={{
-                fontSize: 15,
+                fontSize: 16,
                 fontWeight: 300,
-                color: "rgba(244,237,216,0.5)",
+                color: "rgba(244,237,216,0.75)",
                 lineHeight: 1.9,
-                marginBottom: 22,
+                marginBottom: 18,
               }}
             >
-              My philosophy is shaped by the islands — where every breeze brings
-              a new idea, and every wave reminds us to keep moving forward.
-              Wisdom grows best in good soil. For me, that soil is Bahamian:
-              vibrant, resilient, and full of stories.
+              I grew up where the tide does not rush for anyone. You either learn patience or you learn
+              pain.
             </p>
             <p
               style={{
-                fontSize: 15,
+                fontSize: 16,
                 fontWeight: 300,
-                color: "rgba(244,237,216,0.5)",
+                color: "rgba(244,237,216,0.75)",
+                lineHeight: 1.9,
+                marginBottom: 18,
+              }}
+            >
+              My philosophy was shaped by these islands. Here, every breeze carries conversation. Every
+              wave reminds you that movement is survival. Wisdom does not grow in chaos. It grows in good
+              soil. My soil is Bahamian, resilient, rhythmic, stubborn in the best way.
+            </p>
+            <p
+              style={{
+                fontSize: 16,
+                fontWeight: 300,
+                color: "rgba(244,237,216,0.75)",
+                lineHeight: 1.9,
+                marginBottom: 18,
+              }}
+            >
+              From straw markets to regattas, from dockside debates to boardroom strategy, I study
+              patterns. Like a conch diver searching blue water, I go deeper than the surface. I question
+              assumptions. I challenge inherited thinking. I welcome better ideas when they prove
+              themselves.
+            </p>
+            <p
+              style={{
+                fontSize: 16,
+                fontWeight: 300,
+                color: "rgba(244,237,216,0.75)",
                 lineHeight: 1.9,
               }}
             >
-              From the straw markets to the regattas, I find inspiration in our
-              people, our history, and our way of life. Like a conch diver
-              searching the blue, I&apos;m always looking deeper — asking
-              questions, challenging old ideas, welcoming new perspectives.
+              This Almanack is that search, written down.
             </p>
             <div className="phil-attr">Kenneth C. Moncur</div>
             <div className="about-links" style={{ marginTop: 36 }}>
@@ -58,39 +80,37 @@ export function Philosophy() {
               <div className="pp-num">01 · Rooted</div>
               <div className="pp-title">Bahamian by Design</div>
               <p className="pp-body">
-                Not despite where I&apos;m from — because of it. The islands
-                taught me systems thinking, long-term patience, and community
-                before capital. Small nations produce large ideas when they own
-                their tools.
+                Not despite where I am from. Because of it. The islands trained me early. Community before
+                capital. Patience before panic. Build something that lasts, not something that trends.
+                Small nations can produce large ideas when they own their tools. That belief is not theory
+                to me. It is practice.
               </p>
             </div>
             <div className="phil-principle">
               <div className="pp-num">02 · Curious</div>
               <div className="pp-title">Always Looking Deeper</div>
               <p className="pp-body">
-                Curiosity is a methodology, not a mood. I ask questions before
-                building answers. I sit with problems. Every essay in this
-                Almanack started as a question I couldn&apos;t shake loose.
+                Curiosity is not a personality trait. It is a discipline. I do not rush to answers. I sit
+                with the tension of a problem until it reveals its structure. Most of these essays began as
+                a question that would not leave me alone. If something feels incomplete, I pull the thread.
               </p>
             </div>
             <div className="phil-principle">
               <div className="pp-num">03 · Shared</div>
               <div className="pp-title">Knowledge is Infrastructure</div>
               <p className="pp-body">
-                Too many people hold onto what they know like it&apos;s gold. But
-                shared knowledge is how nations grow. Every page here is a
-                bridge — built so the next person doesn&apos;t have to figure it
-                out alone.
+                Information locked in private vaults does not build nations. Shared knowledge does. If I
+                have learned something useful, it belongs in circulation. Every page here is a bridge, so
+                the next builder does not have to start from scratch.
               </p>
             </div>
             <div className="phil-principle">
               <div className="pp-num">04 · Joyful</div>
               <div className="pp-title">Joy in the Journey</div>
               <p className="pp-body">
-                Happiness is learned, chosen, and present. I try to find it in
-                small things: a good story, a fresh breeze, a laugh with friends.
-                That&apos;s the Bahamian way — and it belongs in any serious
-                philosophy.
+                Serious work does not require a serious face. Happiness is learned. Chosen. Practiced. I
+                find it in small wins, sharp conversations, clean code, a good story, a fresh breeze off
+                the water. That is the Bahamian way. And it belongs in any philosophy worth keeping.
               </p>
             </div>
           </div>

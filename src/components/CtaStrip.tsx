@@ -26,8 +26,8 @@ export function CtaStrip() {
             margin: "0 auto 40px",
           }}
         >
-          When a new piece drops — an essay, a framework, a book chapter —
-          you&apos;ll get it first. No noise. Just the work.
+          When a new essay, framework, or book chapter drops, you will receive it first. No noise. Just
+          signal.
         </p>
         <div className="cta-input-row">
           <input
