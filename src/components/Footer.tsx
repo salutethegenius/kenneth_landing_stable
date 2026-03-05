@@ -15,7 +15,7 @@ export function Footer() {
           <div className="fb-legal">
             © 2025 Kenneth C. Moncur. All rights reserved.
             <br />
-            Nassau, The Bahamas
+            Freeport, Grand Bahama, The Bahamas
             <br />
             kennethmoncur.com
           </div>
@@ -109,7 +109,7 @@ export function Footer() {
       </div>
       <div className="footer-bottom">
         <p>
-          © 2025 Kenneth C. Moncur · Nassau, The Bahamas ·{" "}
+          © 2025 Kenneth C. Moncur · Freeport, Grand Bahama, The Bahamas ·{" "}
           <em>kennethmoncur.com</em>
         </p>
         <p

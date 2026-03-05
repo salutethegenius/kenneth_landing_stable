@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Foreword — Kenneth C. Moncur",
-  description: "Foreword to the Almanack.",
+  description:
+    "Read the foreword to the Almanack of Systems, Code & Legacy by Kenneth C. Moncur.",
+  alternates: {
+    canonical: `${siteUrl}/foreword`,
+  },
 };
 
 export default function ForewordPage() {

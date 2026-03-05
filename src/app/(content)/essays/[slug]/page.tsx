@@ -1,11 +1,36 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/lib/seo";
 
 type Props = { params: Promise<{ slug: string }> };
 
-export async function generateMetadata({ params }: Props) {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const title = slug.replace(/-/g, " ");
-  return { title: `${title} — Kenneth C. Moncur` };
+  const baseDescription = `Essay: ${title} from the Almanack of Systems, Code & Legacy by Kenneth C. Moncur.`;
+  const maxLength = 150;
+  const description =
+    baseDescription.length > maxLength
+      ? `${baseDescription.slice(0, maxLength).trimEnd()}...`
+      : baseDescription;
+  const url = `${siteUrl}/essays/${slug}`;
+
+  return {
+    title: `${title} — Kenneth C. Moncur`,
+    description,
+    alternates: {
+      canonical: url,
+    },
+    openGraph: {
+      title: `${title} — Kenneth C. Moncur`,
+      description,
+      url,
+    },
+    twitter: {
+      title: `${title} — Kenneth C. Moncur`,
+      description,
+    },
+  };
 }
 
 export default async function EssayPlaceholderPage({ params }: Props) {

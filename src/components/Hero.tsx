@@ -11,7 +11,7 @@ export function Hero() {
       </div>
       <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", width: "100%" }}>
         <div className="hero-eyebrow">
-          Almanack of Kenneth C. Moncur · Nassau, The Bahamas
+          Almanack of Kenneth C. Moncur · Freeport, Grand Bahama, The Bahamas
         </div>
         <h1 className="hero-headline">
           <em>Systems.</em>

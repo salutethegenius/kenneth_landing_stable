@@ -216,7 +216,7 @@ th {
                 </tr>
                 <tr>
                     <td><strong>Empower the Masses</strong></td>
-                    <td>From Nassau to Nariyah — tools for the overlooked</td>
+                    <td>From Freeport to Nariyah — tools for the overlooked</td>
                 </tr>
                 <tr>
                     <td><strong>Legacy-Driven</strong></td>

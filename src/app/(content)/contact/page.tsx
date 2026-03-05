@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Contact — Kenneth C. Moncur",
-  description: "Get in touch.",
+  description:
+    "Contact Kenneth C. Moncur about the Almanack, collaborations, or speaking opportunities.",
+  alternates: {
+    canonical: `${siteUrl}/contact`,
+  },
 };
 
 export default function ContactPage() {

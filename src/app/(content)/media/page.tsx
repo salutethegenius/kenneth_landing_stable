@@ -1,8 +1,14 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { siteUrl } from "@/lib/seo";
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Media Gallery — Kenneth C. Moncur",
-  description: "Media gallery.",
+  description:
+    "Explore media, talks, and appearances from Kenneth C. Moncur and the Almanack.",
+  alternates: {
+    canonical: `${siteUrl}/media`,
+  },
 };
 
 export default function MediaPage() {

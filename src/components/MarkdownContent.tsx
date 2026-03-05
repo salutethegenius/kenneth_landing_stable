@@ -39,6 +39,11 @@ export function MarkdownContent({ content }: { content: string }) {
               {children}
             </a>
           ),
+          img: ({ src, alt, ...props }) => (
+            // Use empty alt text when none is provided for decorative images.
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={src ?? ""} alt={alt ?? ""} loading="lazy" {...props} />
+          ),
         }}
       >
         {content}
