@@ -109,6 +109,7 @@ const tocParts = [
         links: [
           { href: "/books/frameworks/sovereign-nation-framework", label: "The Sovereign Nation Framework" },
           { href: "/books/frameworks/digital-constitution-bahamas", label: "The Digital Constitution of the Young Bahamian Citizen" },
+          { href: "/books/frameworks/kgc-dev-system", label: "KGC Dev System" },
         ],
       },
       {
