@@ -1,28 +1,26 @@
 import Link from "next/link";
 
-const tocParts = [
+type TocLink = { href?: string; label: string; upcoming?: boolean };
+
+type TocPart = {
+  roman: string;
+  name: string;
+  sections: { title?: string; links: TocLink[] }[];
+};
+
+const tocParts: TocPart[] = [
   {
     roman: "I",
-    name: "Digital Freedom",
+    name: "Digital Wisdom",
     sections: [
       {
-        title: "Building Wealth",
         links: [
           { href: "/books/building-digital-wealth/smart-black-book", label: "Smart Black Book of Digital Marketing" },
           { href: "/books/building-digital-wealth/smart-black-book-facebook", label: "Smart Black Book of Facebook Advertising" },
-          { href: "/books/building-digital-wealth/digital-hustler-starter-pack", label: "Digital Hustler Starter Kit" },
+          { label: "Things About Digital Life", upcoming: true },
           { href: "/books/Bahamian_Wealth_Creation", label: "How Wealth Is Created: A Bahamian Perspective" },
-          { href: "/books/Moncur_Specific_Knowledge", label: "Find and Build Your Specific Knowledge" },
-          { href: "/books/Moncur_Long_Term_Games", label: "Play Long-Term Games with Long-Term People" },
-          { href: "/books/Moncur_Accountability_Bahamas", label: "Take on Accountability" },
-        ],
-      },
-      {
-        title: "Building Judgment",
-        links: [
-          { href: "/essays/judgment", label: "How to Think Clearly" },
-          { href: "/essays/identity", label: "Shed Your Identity to See Reality" },
-          { href: "/essays/decision-making", label: "Learn the Skills of Decision-Making" },
+          { href: "/books/Moncur_Long_Term_Games", label: "Play Long-Term Games With Long-Term People" },
+          { href: "/books/Moncur_Accountability_Bahamas", label: "Ideas on Accountability" },
         ],
       },
     ],
@@ -32,20 +30,13 @@ const tocParts = [
     name: "Discipline & Happiness",
     sections: [
       {
-        title: "Learning Happiness",
         links: [
-          { href: "/essays/happiness", label: "Happiness Is Learned" },
-          { href: "/essays/choice", label: "Happiness Is a Choice" },
-          { href: "/essays/presence", label: "Happiness Requires Presence" },
-        ],
-      },
-      {
-        title: "Saving Yourself",
-        links: [
+          { label: "Happiness & Content", upcoming: true },
+          { href: "/essays/happiness", label: "Happiness is a Skill" },
+          { href: "/essays/presence", label: "Happiness Requires Pressure" },
           { href: "/essays/be-yourself", label: "Choosing to Be Yourself" },
-          { href: "/essays/self-care", label: "Choosing to Care for Yourself" },
-          { href: "/essays/meditation", label: "Meditation + Mental Strength" },
-          { href: "/essays/freedom", label: "Choosing to Free Yourself" },
+          { href: "/essays/meditation", label: "Meditating is Mental Strength" },
+          { label: "Choosing to Keep Growing", upcoming: true },
         ],
       },
     ],
@@ -56,10 +47,10 @@ const tocParts = [
     sections: [
       {
         links: [
-          { href: "/essays/empire-blueprint", label: "The Empire Blueprint" },
-          { href: "/essays/systems-over-stress", label: "Systems Over Stress" },
-          { href: "/essays/building-in-silence", label: "Building in Silence" },
-          { href: "/pages/web-software", label: "Web & Software" },
+          { href: "/books/frameworks/sovereign-nation-framework", label: "The Sovereign Nation Framework" },
+          { label: "Execute First, Refine", upcoming: true },
+          { label: "Domain First Strategy", upcoming: true },
+          { label: "This is Bahamas", upcoming: true },
         ],
       },
     ],
@@ -71,7 +62,7 @@ const tocParts = [
       {
         links: [
           { href: "/essays/bahamian-by-design", label: "Bahamian by Design" },
-          { href: "/books/The_Moncur_Method", label: "The Moncur Method" },
+          { label: "The Kemis Mission", upcoming: true },
           { href: "/essays/fatherhood-legacy", label: "Fatherhood & Legacy" },
         ],
       },
@@ -84,7 +75,7 @@ const tocParts = [
       {
         links: [
           { href: "/essays/data-sovereignty", label: "Data Sovereignty Is Not Optional" },
-          { href: "/essays/ghost-protocols", label: "The Ghost Protocols" },
+          { label: "The Silent Privilege", upcoming: true },
         ],
       },
     ],
@@ -95,7 +86,7 @@ const tocParts = [
     sections: [
       {
         links: [
-          { href: "/essays/art-of-war-rooms", label: "The Art of War Rooms" },
+          { href: "/essays/art-of-war-rooms", label: "The Art of War Stories" },
           { href: "/essays/hustlers-compass", label: "The Hustler's Compass" },
         ],
       },
@@ -107,21 +98,19 @@ const tocParts = [
     sections: [
       {
         links: [
-          { href: "/books/frameworks/sovereign-nation-framework", label: "The Sovereign Nation Framework" },
-          { href: "/books/frameworks/digital-constitution-bahamas", label: "The Digital Constitution of the Young Bahamian Citizen" },
-          { href: "/books/frameworks/kgc-dev-system", label: "KGC Dev System" },
-        ],
-      },
-      {
-        title: "Bonus",
-        links: [
-          { href: "/books/recommended", label: "Recommended Reading" },
-          { href: "/media", label: "Media Gallery" },
-          { href: "/contact", label: "Contact" },
+          { label: "The Sovereign Nation Frameworks", upcoming: true },
+          { href: "/books/frameworks/digital-constitution-bahamas", label: "The Digital Foundation of the Young Bahamian Citizen" },
+          { label: "KGC Five Pivots", upcoming: true },
         ],
       },
     ],
   },
+];
+
+const endMatter: TocLink[] = [
+  { label: "Recommended Reading", upcoming: true },
+  { href: "/#about", label: "About" },
+  { href: "/contact", label: "Contact" },
 ];
 
 export function Toc() {
@@ -136,57 +125,42 @@ export function Toc() {
               <br />
               <em>Table of Contents</em>
             </h2>
-            <p className="section-p" style={{ marginBottom: 36 }}>
-              Every essay, book, and framework organized as a deliberate reading path. Move sequentially
-              or jump where you feel resistance. Each part builds on the previous one, but every piece
-              stands on its own.
+            <p className="section-p" style={{ marginBottom: 32 }}>
+              Everything I have written, organized by theme. Seven parts
+              moving from the personal to the sovereign. Move sequentially or
+              jump where you feel resistance — each piece stands on its own.
             </p>
-            <div
-              style={{
-                padding: "24px 28px",
-                background: "rgba(154,120,48,0.06)",
-                borderLeft: "2px solid var(--brass)",
-                marginBottom: 28,
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: "'DM Mono',monospace",
-                  fontSize: 8.5,
-                  color: "var(--brass)",
-                  letterSpacing: "0.16em",
-                  textTransform: "uppercase",
-                  marginBottom: 10,
-                }}
-              >
-                Start here
+            <div className="toc-newsletter">
+              <div className="toc-newsletter-label">
+                New essays. In your inbox.
               </div>
-              <p
-                style={{
-                  fontFamily: "'Cormorant Garant',serif",
-                  fontSize: 17,
-                  fontStyle: "italic",
-                  color: "rgba(244,237,216,0.7)",
-                  lineHeight: 1.6,
-                }}
-              >
-                &quot;Thank you for visiting. Enjoy the published content. We
-                appreciate your support — and please pay it forward.&quot;
-              </p>
-              <p
-                style={{
-                  fontFamily: "'DM Mono',monospace",
-                  fontSize: 9,
-                  color: "rgba(244,237,216,0.28)",
-                  letterSpacing: "0.08em",
-                  marginTop: 10,
-                }}
-              >
-                — Kenneth C. Moncur
+              <div className="cta-input-row">
+                <input
+                  className="cta-input"
+                  type="email"
+                  placeholder="your@email.com"
+                  aria-label="Email for newsletter"
+                />
+                <button type="button" className="cta-btn cta-btn-brass">
+                  Subscribe
+                </button>
+              </div>
+              <p className="cta-sub-note">
+                No spam. Unsubscribe any time. Pay it forward.
               </p>
             </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
-              <Link href="/#about" className="toc-left-link toc-left-link-brass">
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                gap: 10,
+                marginTop: 32,
+              }}
+            >
+              <Link
+                href="/#about"
+                className="toc-left-link toc-left-link-brass"
+              >
                 About This Almanac <span>→</span>
               </Link>
               <Link href="/foreword" className="toc-left-link">
@@ -210,9 +184,17 @@ export function Toc() {
                       <div className="toc-sub-title">{sec.title}</div>
                     )}
                     <ul className="toc-links">
-                      {sec.links.map((link) => (
-                        <li key={link.href}>
-                          <Link href={link.href}>{link.label}</Link>
+                      {sec.links.map((link, j) => (
+                        <li
+                          key={
+                            link.href ?? `upcoming-${part.roman}-${j}-${link.label}`
+                          }
+                        >
+                          {link.upcoming || !link.href ? (
+                            <em className="toc-upcoming">{link.label}</em>
+                          ) : (
+                            <Link href={link.href}>{link.label}</Link>
+                          )}
                         </li>
                       ))}
                     </ul>
@@ -220,6 +202,25 @@ export function Toc() {
                 ))}
               </div>
             ))}
+            <div className="toc-part toc-end-matter">
+              <div className="toc-part-header">
+                <span className="toc-roman">·</span>
+                <span className="toc-part-name">End Matter</span>
+              </div>
+              <ul className="toc-links">
+                {endMatter.map((link, j) => (
+                  <li
+                    key={link.href ?? `end-${j}-${link.label}`}
+                  >
+                    {link.upcoming || !link.href ? (
+                      <em className="toc-upcoming">{link.label}</em>
+                    ) : (
+                      <Link href={link.href}>{link.label}</Link>
+                    )}
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </div>
