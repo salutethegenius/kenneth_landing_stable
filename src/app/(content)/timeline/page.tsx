@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Timeline — Kenneth C. Moncur",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Timeline",
   description:
     "Follow the timeline of how the Almanack, essays, and frameworks by Kenneth C. Moncur came together.",
-  alternates: {
-    canonical: `${siteUrl}/timeline`,
-  },
-};
+  path: "/timeline",
+  noindex: true,
+});
 
 export default function TimelinePage() {
   return (

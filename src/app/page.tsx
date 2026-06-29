@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { siteDescription, siteName, siteUrl } from "@/lib/seo";
+import { buildPageMetadata, siteKeywords, siteName } from "@/lib/seo";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
 import { Mission } from "@/components/Mission";
@@ -16,11 +16,20 @@ import { Footer } from "@/components/Footer";
 import { ScrollEffects } from "@/components/ScrollEffects";
 
 export const metadata: Metadata = {
-  title: siteName,
-  description: siteDescription,
-  alternates: {
-    canonical: siteUrl,
-  },
+  ...buildPageMetadata({
+    title: siteName,
+    description:
+      "Bahamian founder Kenneth C. Moncur builds the Caribbean's sovereign digital future from Freeport — essays, frameworks, and the work happening now at Kemis Group of Companies.",
+    path: "/",
+    type: "website",
+    keywords: [
+      ...siteKeywords,
+      "Kenneth Moncur essays",
+      "Bahamian entrepreneur",
+      "Caribbean infrastructure",
+    ],
+  }),
+  title: { absolute: siteName },
 };
 
 export default function Home() {
@@ -28,7 +37,7 @@ export default function Home() {
     <>
       <ScrollEffects />
       <Nav />
-      <main>
+      <main id="main-content">
         <Hero />
         <Mission />
         <Building />

@@ -117,7 +117,7 @@ export function Parts() {
             >
               <div
                 style={{
-                  fontFamily: "'DM Mono',monospace",
+                  fontFamily: "var(--font-dmmono),monospace",
                   fontSize: 9,
                   color: "var(--brass)",
                   letterSpacing: "0.14em",

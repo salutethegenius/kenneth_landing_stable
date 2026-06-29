@@ -1,15 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Contact — Kenneth C. Moncur",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Contact",
   description:
-    "Invite Kenneth to your conversation — speaking, advisory, press, and strategic partnerships on digital sovereignty and Caribbean technology infrastructure.",
-  alternates: {
-    canonical: `${siteUrl}/contact`,
-  },
-};
+    "Invite Kenneth C. Moncur to speak or advise on digital sovereignty, Caribbean tech, and AI infrastructure.",
+  path: "/contact",
+});
 
 const availableFor = [
   "Keynote and panel speaking at Bahamian and Caribbean conferences",

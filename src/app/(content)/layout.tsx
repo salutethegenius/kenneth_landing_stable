@@ -12,7 +12,7 @@ export default function ContentLayout({
     <>
       <ScrollEffects />
       <Nav />
-      <main>
+      <main id="main-content">
         <BackButton />
         {children}
       </main>

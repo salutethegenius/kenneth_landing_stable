@@ -94,7 +94,7 @@ export function Footer() {
         </p>
         <p
           style={{
-            fontFamily: "'Cormorant Garant',serif",
+            fontFamily: "var(--font-cormorant),serif",
             fontSize: 14,
             fontStyle: "italic",
             color: "var(--brass-l)",

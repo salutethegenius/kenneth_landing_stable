@@ -55,7 +55,7 @@ export function Featured() {
             href="/pages/table_of_contents"
             className="feat-cta-link"
             style={{
-              fontFamily: "'DM Mono',monospace",
+              fontFamily: "var(--font-dmmono),monospace",
               fontSize: 10,
               color: "var(--brass-l)",
               textDecoration: "none",

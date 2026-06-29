@@ -1,15 +1,14 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { siteUrl } from "@/lib/seo";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "Media Gallery — Kenneth C. Moncur",
+export const metadata: Metadata = buildPageMetadata({
+  title: "Media",
   description:
     "Explore media, talks, and appearances from Kenneth C. Moncur and the Almanack.",
-  alternates: {
-    canonical: `${siteUrl}/media`,
-  },
-};
+  path: "/media",
+  noindex: true,
+});
 
 export default function MediaPage() {
   return (

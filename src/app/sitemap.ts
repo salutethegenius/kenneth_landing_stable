@@ -1,3 +1,5 @@
+import fs from "fs";
+import path from "path";
 import type { MetadataRoute } from "next";
 import {
   listPageSlugs,
@@ -7,27 +9,22 @@ import {
 } from "@/lib/content";
 import { siteUrl } from "@/lib/seo";
 
-const essaySlugs: string[] = [
-  "judgment",
-  "identity",
-  "decision-making",
-  "happiness",
-  "choice",
-  "presence",
-  "be-yourself",
-  "self-care",
-  "meditation",
-  "freedom",
-  "empire-blueprint",
-  "systems-over-stress",
-  "building-in-silence",
-  "bahamian-by-design",
-  "fatherhood-legacy",
-  "data-sovereignty",
-  "ghost-protocols",
-  "art-of-war-rooms",
-  "hustlers-compass",
-];
+/**
+ * Use the content file's last-modified time when available so search engines
+ * get a meaningful lastmod signal instead of a rolling build timestamp.
+ */
+function mtimeFor(relDir: string, slug: string): Date {
+  try {
+    const root = path.join(process.cwd(), "content");
+    const direct = path.join(root, relDir, `${slug}.md`);
+    if (fs.existsSync(direct)) return fs.statSync(direct).mtime;
+    const underscored = path.join(root, relDir, slug.replace(/-/g, "_") + ".md");
+    if (fs.existsSync(underscored)) return fs.statSync(underscored).mtime;
+  } catch {
+    /* fall through */
+  }
+  return new Date();
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();
@@ -40,50 +37,32 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1.0,
     },
     {
-      url: `${siteUrl}/foreword`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.9,
-    },
-    {
       url: `${siteUrl}/contact`,
       lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${siteUrl}/media`,
-      lastModified: now,
-      changeFrequency: "weekly",
-      priority: 0.6,
-    },
-    {
-      url: `${siteUrl}/timeline`,
-      lastModified: now,
-      changeFrequency: "weekly",
+      changeFrequency: "monthly",
       priority: 0.6,
     },
   ];
 
   const pageRoutes: MetadataRoute.Sitemap = listPageSlugs().map((slug) => ({
     url: `${siteUrl}/pages/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
+    lastModified: mtimeFor("pages", slug),
+    changeFrequency: "monthly",
     priority: 0.8,
   }));
 
   const bookRoutes: MetadataRoute.Sitemap = listBookSlugs().map((slug) => ({
     url: `${siteUrl}/books/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
+    lastModified: mtimeFor("books", slug),
+    changeFrequency: "monthly",
     priority: 0.8,
   }));
 
   const frameworkRoutes: MetadataRoute.Sitemap = listBookFrameworkSlugs().map(
     (slug) => ({
       url: `${siteUrl}/books/frameworks/${slug}`,
-      lastModified: now,
-      changeFrequency: "weekly",
+      lastModified: mtimeFor("books/frameworks", slug),
+      changeFrequency: "monthly",
       priority: 0.8,
     })
   );
@@ -91,25 +70,20 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const buildingDigitalWealthRoutes: MetadataRoute.Sitemap =
     listBuildingDigitalWealthSlugs().map((slug) => ({
       url: `${siteUrl}/books/building-digital-wealth/${slug}`,
-      lastModified: now,
-      changeFrequency: "weekly",
+      lastModified: mtimeFor("books/building-digital-wealth", slug),
+      changeFrequency: "monthly",
       priority: 0.8,
     }));
 
-  const essayRoutes: MetadataRoute.Sitemap = essaySlugs.map((slug) => ({
-    url: `${siteUrl}/essays/${slug}`,
-    lastModified: now,
-    changeFrequency: "weekly",
-    priority: 0.7,
-  }));
-
+  // NOTE: Essay routes (/essays/*), /foreword, /media, /timeline are
+  // placeholder ("not yet published") pages and are noindex'd at the page
+  // level. They are intentionally excluded from the sitemap to avoid
+  // surfacing thin content to crawlers. Add them back as they are published.
   return [
     ...staticRoutes,
     ...pageRoutes,
     ...bookRoutes,
     ...frameworkRoutes,
     ...buildingDigitalWealthRoutes,
-    ...essayRoutes,
   ];
 }
-
