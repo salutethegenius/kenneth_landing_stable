@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { siteDescription, siteName, siteUrl } from "@/lib/seo";
 import { Nav } from "@/components/Nav";
 import { Hero } from "@/components/Hero";
+import { Mission } from "@/components/Mission";
+import { Building } from "@/components/Building";
 import { Philosophy } from "@/components/Philosophy";
 import { Parts } from "@/components/Parts";
 import { Featured } from "@/components/Featured";
@@ -25,6 +27,8 @@ export default function Home() {
       <Nav />
       <main>
         <Hero />
+        <Mission />
+        <Building />
         <Philosophy />
         <Parts />
         <Featured />
