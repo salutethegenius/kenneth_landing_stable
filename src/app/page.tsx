@@ -7,6 +7,9 @@ import { Building } from "@/components/Building";
 import { Philosophy } from "@/components/Philosophy";
 import { Parts } from "@/components/Parts";
 import { Featured } from "@/components/Featured";
+import { Beliefs } from "@/components/Beliefs";
+import { Recognition } from "@/components/Recognition";
+import { Speaking } from "@/components/Speaking";
 import { Toc } from "@/components/Toc";
 import { CtaStrip } from "@/components/CtaStrip";
 import { Footer } from "@/components/Footer";
@@ -32,8 +35,11 @@ export default function Home() {
         <Philosophy />
         <Parts />
         <Featured />
-        <Toc />
+        <Beliefs />
+        <Recognition />
+        <Speaking />
         <CtaStrip />
+        <Toc />
         <Footer />
       </main>
     </>
