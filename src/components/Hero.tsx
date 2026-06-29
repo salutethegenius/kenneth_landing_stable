@@ -23,14 +23,14 @@ export function Hero() {
         <div className="hero-sub-line" />
         <p className="hero-desc">
           My mission is to build the{" "}
-          <em>Caribbean's sovereign digital future</em> from The Bahamas.
+          <em>Caribbean&apos;s sovereign digital future</em> from The Bahamas.
         </p>
         <div className="hero-cta-row">
           <Link href="#essays" className="hero-cta-pill brass">
             Read My Work
           </Link>
           <Link href="#building" className="hero-cta-pill">
-            See What I'm Building →
+            See What I&apos;m Building →
           </Link>
         </div>
       </div>
