@@ -48,13 +48,9 @@ export default function ContactPage() {
         Send a short note with the date, audience, and topic. I read every
         inquiry personally and respond within a few days.
       </p>
-      {/* TODO(verify-before-merge): confirm the correct inquiry email address
-          before merge. kenneth@kennethmoncur.com is a placeholder that matches
-          the site domain; update if a different address (e.g. a KGC inbox or
-          a speaking-specific alias) should receive these inquiries. */}
       <p className="content-prose">
-        <a href="mailto:kenneth@kennethmoncur.com" className="content-link">
-          kenneth@kennethmoncur.com
+        <a href="mailto:ken@kemisdigital.com" className="content-link">
+          ken@kemisdigital.com
         </a>
       </p>
       <p className="content-prose" style={{ marginTop: "2rem" }}>

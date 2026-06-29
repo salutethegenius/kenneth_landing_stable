@@ -10,10 +10,6 @@ const recognitionItems = [
     desc: "Featured coverage of LawBey, the AI-powered Bahamian legal research platform serving 500+ attorneys and growing.",
   },
   {
-    source: "Voice of the Bahamas",
-    desc: "Two decades of radio and television presence across The Bahamas. The media career that built the audience the infrastructure now serves.",
-  },
-  {
     source: "Keys From The Senate",
     desc: "Four-part educational series produced with Senator Keenan Johnson (Parliamentary Secretary, Ministry of Education) breaking down the 2026/2027 National Budget in partnership with LawBey.",
   },
