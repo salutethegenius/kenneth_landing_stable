@@ -3,10 +3,10 @@ export const siteUrl =
   "https://kennethmoncur.com";
 
 export const siteName =
-  "Kenneth C. Moncur — Almanack of Systems, Code & Legacy";
+  "Kenneth C. Moncur — Founder, Kemis Group of Companies";
 
 export const siteDescription =
-  "A personal guide to freedom, discipline, and sovereign thinking in the digital age, rooted in Bahamian culture.";
+  "My mission is to build the Caribbean's sovereign digital future from The Bahamas.";
 
 export const defaultOgImage = `${siteUrl}/og-default.png`;
 

@@ -11,40 +11,26 @@ export function Hero() {
       </div>
       <div style={{ position: "relative", zIndex: 1, maxWidth: 1200, margin: "0 auto", width: "100%" }}>
         <div className="hero-eyebrow">
-          Almanack of Kenneth C. Moncur · Freeport, Grand Bahama, The Bahamas
+          Freeport, Grand Bahama · The Bahamas
         </div>
         <h1 className="hero-headline">
-          <em>Systems.</em>
-          <br />
-          <strong>Code. Legacy.</strong>
+          <strong>Kenneth C. Moncur</strong>
         </h1>
+        <div className="hero-subhead">
+          Founder, Kemis Group of Companies
+        </div>
+        <div className="hero-tagline">Builder · Writer · Bahamian</div>
         <div className="hero-sub-line" />
         <p className="hero-desc">
-          This is not a blog. It is a body of work. A personal guide to{" "}
-          <em>freedom, discipline, and sovereign thinking</em> in the digital age, rooted in Bahamian
-          culture and written for anyone serious about building something real.
+          My mission is to build the{" "}
+          <em>Caribbean&apos;s sovereign digital future</em> from The Bahamas.
         </p>
-        <div className="hero-parts-row">
-          <Link href="#parts" className="hero-part-pill brass">
-            I — Digital Freedom
+        <div className="hero-cta-row">
+          <Link href="#essays" className="hero-cta-pill brass">
+            Read My Work
           </Link>
-          <Link href="#parts" className="hero-part-pill">
-            II — Discipline
-          </Link>
-          <Link href="#parts" className="hero-part-pill">
-            III — Systems
-          </Link>
-          <Link href="#parts" className="hero-part-pill">
-            IV — Legacy
-          </Link>
-          <Link href="#parts" className="hero-part-pill">
-            V — Ethics
-          </Link>
-          <Link href="#parts" className="hero-part-pill">
-            VI — The Street
-          </Link>
-          <Link href="#parts" className="hero-part-pill">
-            VII — Frameworks
+          <Link href="#building" className="hero-cta-pill">
+            See What I&apos;m Building →
           </Link>
         </div>
       </div>

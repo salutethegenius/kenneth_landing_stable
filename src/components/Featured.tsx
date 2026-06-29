@@ -3,11 +3,11 @@ import Link from "next/link";
 const featured = [
   {
     href: "/books/Bahamian_Wealth_Creation",
-    type: "Essay · Part I · Digital Freedom",
+    type: "Essay · Part I · Digital Wisdom",
     title: "How Wealth Is Created:",
     titleEm: "A Bahamian Perspective",
-    desc: "Wealth is not what you hold. It is what you understand. This is a clear look at how Bahamians can participate in the digital economy on our own terms. Not as users of systems built elsewhere. As architects of our own leverage.",
-    part: "Building Wealth",
+    desc: "Wealth creation in the Caribbean looks different from the models exported from the West. Here is what I have learned about building real economic value from a small island nation.",
+    part: "Digital Wisdom",
     delay: "0s",
   },
   {
@@ -15,7 +15,7 @@ const featured = [
     type: "Essay · Part V · Digital Ethics",
     title: "Data Sovereignty",
     titleEm: "Is Not Optional",
-    desc: "If your data lives on foreign servers, your future is being negotiated in rooms you will never enter. This is not politics. It is survival strategy for small nations in a digital world.",
+    desc: "Every Bahamian institution running on foreign SaaS is making a sovereignty decision, whether they know it or not. This is what that decision costs and what it would take to reverse it.",
     part: "Digital Power & Ethics",
     delay: "0.1s",
   },
@@ -24,7 +24,7 @@ const featured = [
     type: "Framework · Part VII · Capstone",
     title: "The Sovereign",
     titleEm: "Nation Framework",
-    desc: "The culmination of this Almanack. A complete blueprint for any people willing to take ownership of their digital future. Built with The Bahamas in mind, but applicable to any small nation ready to lead instead of follow.",
+    desc: "A working blueprint for how small English-speaking Caribbean nations can build and own their digital infrastructure — rather than perpetually renting it from abroad.",
     part: "Sovereign Nation Frameworks",
     delay: "0.2s",
   },

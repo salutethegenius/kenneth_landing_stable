@@ -5,9 +5,9 @@ const partCards = [
     href: "/books/building-digital-wealth/smart-black-book",
     roman: "I",
     part: "Part One",
-    title: "Digital Freedom",
-    desc: "Building wealth, specific knowledge, and digital leverage from a Bahamian perspective. Not as consumers of global systems, but as owners of our own.",
-    count: "7 works",
+    title: "Digital Wisdom",
+    desc: "How to think clearly in an age of information overload. Tools, mental models, and frameworks for navigating the digital world without losing yourself in it.",
+    count: "6 works",
     delay: "0s",
   },
   {
@@ -15,7 +15,7 @@ const partCards = [
     roman: "II",
     part: "Part Two",
     title: "Discipline & Happiness",
-    desc: "The inner architecture. Happiness is learned. Presence is trained. The outer empire collapses without inner order.",
+    desc: "The inner architecture of a builder. How I think about patience, consistency, mental health, and what it actually takes to keep going when nothing is working yet.",
     count: "6 works",
     delay: "0.05s",
   },
@@ -24,7 +24,7 @@ const partCards = [
     roman: "III",
     part: "Part Three",
     title: "Systems & Strategy",
-    desc: "The Empire Blueprint. Systems Over Stress. Building in Silence. This is where vision turns into structure.",
+    desc: "How to see the pattern underneath the complexity. Business models, infrastructure thinking, long-term strategy, and the frameworks I use to make decisions across KGC.",
     count: "4 works",
     delay: "0.1s",
   },
@@ -33,7 +33,7 @@ const partCards = [
     roman: "IV",
     part: "Part Four",
     title: "Legacy & Identity",
-    desc: "Bahamian by Design. The Moncur Method. Fatherhood. What remains after the applause fades.",
+    desc: "What it means to build something that outlasts you. How I think about Bahamian identity, Caribbean excellence, generational stewardship, and what I want to leave behind.",
     count: "3 works",
     delay: "0.15s",
   },
@@ -42,7 +42,7 @@ const partCards = [
     roman: "V",
     part: "Part Five",
     title: "Digital Power & Ethics",
-    desc: "Data sovereignty is not optional. The Ghost Protocols. Power without ethics is chaos.",
+    desc: "Who owns the data. Who trains the models. Who controls the rails. The political economy of AI and digital infrastructure from a small-nation perspective.",
     count: "2 works",
     delay: "0.05s",
   },
@@ -50,8 +50,8 @@ const partCards = [
     href: "/essays/art-of-war-rooms",
     roman: "VI",
     part: "Part Six",
-    title: "The Street & The Code",
-    desc: "The Art of War Rooms. The Hustler's Compass. Street discipline and digital execution follow the same laws.",
+    title: "His Values & The Code",
+    desc: "The personal operating system. How I live, what I believe, how I treat people, and the principles that govern every decision I make inside and outside KGC.",
     count: "2 works",
     delay: "0.1s",
   },
@@ -63,7 +63,7 @@ export function Parts() {
       <div style={{ maxWidth: 1200, margin: "0 auto" }}>
         <div className="parts-intro">
           <div className="fu">
-            <div className="eyebrow dark">The Almanack</div>
+            <div className="eyebrow dark">What I Write About</div>
             <h2 className="section-h dark">
               Seven Parts.
               <br />
@@ -72,8 +72,9 @@ export function Parts() {
           </div>
           <div className="fu" style={{ transitionDelay: "0.1s" }}>
             <p className="section-p dark">
-              Twenty plus essays, books, and frameworks organized into seven parts. They move from the
-              personal to the sovereign. Start anywhere. Follow what pulls you. Everything connects.
+              Everything I write fits inside one of seven themes. Together they
+              form a guide to building in the digital age from a Bahamian
+              perspective.
             </p>
           </div>
         </div>
@@ -102,10 +103,9 @@ export function Parts() {
               <div className="pc-part">Part Seven — The Capstone</div>
               <div className="pc-title">Sovereign Nation Frameworks</div>
               <p className="pc-desc" style={{ maxWidth: 540 }}>
-                The Sovereign Nation Framework. The Digital Constitution of the
-                Young Bahamian Citizen. Everything before this part builds to
-                here: a blueprint for a people who decide to own their own
-                future.
+                The blueprint for digital sovereignty in small nations. How
+                countries like The Bahamas can build and govern their own
+                digital infrastructure rather than renting it from abroad.
               </p>
             </div>
             <div

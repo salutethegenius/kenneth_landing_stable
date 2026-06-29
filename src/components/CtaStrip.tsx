@@ -8,7 +8,7 @@ export function CtaStrip() {
           className="eyebrow dark"
           style={{ justifyContent: "center", marginBottom: 18 }}
         >
-          Stay in the work
+          The Newsletter
         </div>
         <h2
           className="section-h dark"
@@ -22,12 +22,14 @@ export function CtaStrip() {
           className="section-p dark"
           style={{
             textAlign: "center",
-            maxWidth: 420,
+            maxWidth: 460,
             margin: "0 auto 40px",
           }}
         >
-          When a new essay, framework, or book chapter drops, you will receive it first. No noise. Just
-          signal.
+          I write about systems, sovereignty, and what it means to build
+          something that lasts — from Freeport, Grand Bahama, for the
+          Caribbean and the world. No noise. No frequency promises. Just the
+          essays when they are ready.
         </p>
         <div className="cta-input-row">
           <input
@@ -47,3 +49,4 @@ export function CtaStrip() {
     </section>
   );
 }
+

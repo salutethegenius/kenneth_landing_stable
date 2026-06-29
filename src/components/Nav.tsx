@@ -26,25 +26,31 @@ export function Nav() {
         <SealedKLogoNav className="nav-seal" />
         <div className="nav-name">
           Kenneth C. Moncur
-          <span>Almanack · Systems · Code · Legacy</span>
+          <span>Founder · Kemis Group of Companies</span>
         </div>
       </Link>
       <ul className="nav-links">
         <li>
+          <Link href="#mission">Mission</Link>
+        </li>
+        <li>
+          <Link href="#building">Building</Link>
+        </li>
+        <li>
           <Link href="#parts">Parts</Link>
         </li>
         <li>
-          <Link href="#essays">Essays</Link>
+          <Link href="#beliefs">Beliefs</Link>
+        </li>
+        <li>
+          <Link href="#recognition">Recognition</Link>
         </li>
         <li>
           <Link href="#toc">Contents</Link>
         </li>
-        <li>
-          <Link href="#about">About</Link>
-        </li>
       </ul>
       <Link href="#newsletter" className="nav-cta nav-cta-desktop">
-        Read the Almanack
+        Subscribe
       </Link>
       <button
         type="button"
@@ -60,20 +66,26 @@ export function Nav() {
         </span>
       </button>
       <div className="nav-drawer" aria-hidden={!menuOpen}>
+        <Link href="#mission" onClick={closeMenu}>
+          Mission
+        </Link>
+        <Link href="#building" onClick={closeMenu}>
+          Building
+        </Link>
         <Link href="#parts" onClick={closeMenu}>
           Parts
         </Link>
-        <Link href="#essays" onClick={closeMenu}>
-          Essays
+        <Link href="#beliefs" onClick={closeMenu}>
+          Beliefs
+        </Link>
+        <Link href="#recognition" onClick={closeMenu}>
+          Recognition
         </Link>
         <Link href="#toc" onClick={closeMenu}>
           Contents
         </Link>
-        <Link href="#about" onClick={closeMenu}>
-          About
-        </Link>
         <Link href="#newsletter" className="nav-drawer-cta" onClick={closeMenu}>
-          Read the Almanack
+          Subscribe
         </Link>
       </div>
     </nav>
