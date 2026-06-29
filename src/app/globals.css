@@ -693,7 +693,7 @@ body::before {
 }
 
 .footer { background:#100A04;padding:72px 72px 40px;border-top:1px solid rgba(154,120,48,0.15); }
-.footer-top { display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:48px;margin-bottom:56px; }
+.footer-top { display:grid;grid-template-columns:2fr 1fr 1fr;gap:48px;margin-bottom:56px; }
 .fb-mark {
   font-family:'Cormorant Garant',serif;font-size:22px;font-weight:700;
   color:var(--parch);letter-spacing:0.02em;margin-bottom:4px;

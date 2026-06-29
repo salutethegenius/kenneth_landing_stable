@@ -6,14 +6,13 @@ export function Footer() {
       <div className="footer-top">
         <div>
           <div className="fb-mark">Kenneth C. Moncur</div>
-          <div className="fb-sub">Almanack · Systems · Code · Legacy</div>
+          <div className="fb-sub">Founder, Kemis Group of Companies</div>
           <p className="fb-p">
-            Author, digital freedom advocate, and Bahamian thinker. Building
-            sovereign infrastructure for a digital future — starting with the
-            written word.
+            Freeport, Grand Bahama · The Bahamas. My mission is to build the
+            Caribbean&apos;s sovereign digital future from The Bahamas.
           </p>
           <div className="fb-legal">
-            © 2025 Kenneth C. Moncur. All rights reserved.
+            © 2026 Kenneth C. Moncur. All rights reserved.
             <br />
             Freeport, Grand Bahama, The Bahamas
             <br />
@@ -21,49 +20,33 @@ export function Footer() {
           </div>
         </div>
         <div>
-          <div className="footer-col-title">The Almanack</div>
+          <div className="footer-col-title">Navigate</div>
           <ul className="footer-links">
             <li>
-              <Link href="/pages/table_of_contents">Table of Contents</Link>
+              <Link href="/">Home</Link>
             </li>
             <li>
-              <Link href="/#about">About This Almanac</Link>
+              <Link href="/#essays">Essays</Link>
             </li>
             <li>
-              <Link href="/foreword">Foreword</Link>
+              <Link href="/#building">What I&apos;m Building</Link>
             </li>
             <li>
-              <Link href="/timeline">Timeline</Link>
+              <Link href="/#beliefs">What I Believe</Link>
             </li>
             <li>
-              <Link href="/media">Media Gallery</Link>
+              <Link href="/#speaking">Speaking</Link>
+            </li>
+            <li>
+              <Link href="/#newsletter">Newsletter</Link>
+            </li>
+            <li>
+              <Link href="/contact">Contact</Link>
             </li>
           </ul>
         </div>
         <div>
-          <div className="footer-col-title">Essays & Books</div>
-          <ul className="footer-links">
-            <li>
-              <Link href="/essays/judgment">How to Think Clearly</Link>
-            </li>
-            <li>
-              <Link href="/essays/data-sovereignty">Data Sovereignty</Link>
-            </li>
-            <li>
-              <Link href="/essays/empire-blueprint">The Empire Blueprint</Link>
-            </li>
-            <li>
-              <Link href="/books/The_Moncur_Method">The Moncur Method</Link>
-            </li>
-            <li>
-              <Link href="/books/frameworks/sovereign-nation-framework">
-                Sovereign Nation Framework
-              </Link>
-            </li>
-          </ul>
-        </div>
-        <div>
-          <div className="footer-col-title">The Ecosystem</div>
+          <div className="footer-col-title">Part of the KGC family</div>
           <ul className="footer-links">
             <li>
               <a
@@ -71,7 +54,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Kemis Group of Companies
+                thekemisgroup.com
               </a>
             </li>
             <li>
@@ -80,16 +63,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                LawBey
-              </a>
-            </li>
-            <li>
-              <a
-                href="https://bahamasopendata.com"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                BahamasOpenData
+                lawbey.com
               </a>
             </li>
             <li>
@@ -98,18 +72,24 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                KemisDigital
+                kemisdigital.com
               </a>
             </li>
             <li>
-              <Link href="/contact">Contact</Link>
+              <a
+                href="https://bahamasopendata.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                bahamasopendata.com
+              </a>
             </li>
           </ul>
         </div>
       </div>
       <div className="footer-bottom">
         <p>
-          © 2025 Kenneth C. Moncur · Freeport, Grand Bahama, The Bahamas ·{" "}
+          © 2026 Kenneth C. Moncur · Freeport, Grand Bahama, The Bahamas ·{" "}
           <em>kennethmoncur.com</em>
         </p>
         <p
